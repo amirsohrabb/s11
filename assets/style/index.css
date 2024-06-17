@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 body {
   margin: 0;
@@ -20,18 +19,19 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  background-color: red;
 }
 .row {
   display: flex;
-  justify-content: space-between;
+}
+.shadow {
+  box-shadow: 0px 0px 2px 0px #0000001f, 0px 4px 8px 0px #00000024;
 }
 .box {
+  padding: 16px;
   border-radius: 16px;
   background: rgba(61, 61, 61, 1);
-  margin-top: 16px;
-}
-.box {
-margin: 8px;
 }
 .box-1 {
 /* height: 178px; */
@@ -73,14 +73,14 @@ grid-row-end: 2;
   grid-column-start: 3;
   grid-column-end:4;
 }
-.box-1 p ,.box-1 span {
+.box-1 p ,.box-1 span, .box-3 p {
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff66;
   margin: 0;
 }
-.box-1 h2 {
+.box-1 h2, h1, .box-3 h2, .box-3 h3 {
   color: #ffffff;
   font-size: 28px;
   font-weight: 500;
@@ -93,12 +93,27 @@ grid-row-end: 2;
 .box-1-txt p {
   margin-bottom: 42px;
 }
-h1 {
+
+.heading {
+  padding: 16px 16px 16px 0;
+  margin: 0 16px 16px 0;
+}
+.heading span {
+  padding: 10px 16px;
+  margin-right: 10px;
+  color: #242424;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.5s ease;
+  border-bottom: none;
+}
+.heading a {
+  border-bottom: none;
+}
+.heading span:hover {
+  background-color: #292929;
   color: #ffffff;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 36px;
-  margin: 0;
+  border-radius: 5px;
 }
 .box-2 span {
   color: #ffffff;
@@ -112,13 +127,18 @@ a {
   display: block;
   text-decoration: none;
 }
-.card img {
+.box img {
   width: 155px;
   height: 155px;
 }
-.card h2 {
+.box h2 {
   font-size: 24px;
   line-height: 32px;
+}
+.box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
 }
 .box-2 .hero img {
   width: 816px;
@@ -127,6 +147,22 @@ a {
   object-fit: cover;
   background-color: red;
 }
-.shadow {
-  box-shadow: 0px 0px 2px 0px #0000001f, 0px 4px 8px 0px #00000024;
+.box-3 h2 {
+  margin-top: 8px;
+}
+.content-1 {
+  margin: 16px;
+  border-left: 2px solid #ffc453;
+}
+.content-2 {
+  margin: 0 16px;
+  border-left: 2px solid #29e489;
+}
+.content-1 h3 ,
+.content-2 h3 {
+  margin-left: 12px;
+}
+.content-1 p ,
+.content-2 p {
+  margin-left: 12px;
 }
